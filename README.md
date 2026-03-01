@@ -24,7 +24,7 @@ endpoint pipeline automatically.
 
 ### Manual
 
-1. Add the dependency to `mix.exs`, then run `mix do deps.get, compile`
+Add the dependency to `mix.exs`, then run `mix do deps.get, compile`
 
 ```elixir
 def deps do
@@ -34,13 +34,7 @@ def deps do
 end
 ```
 
-2. Run the install task to add the plug to your endpoint pipeline:
-
-```bash
-mix kamal_plug.install
-```
-
-Or manually add `plug KamalPlug.HealthCheck` to your endpoint module before `Plug.RequestId`:
+Then manually add `plug KamalPlug.HealthCheck` to your endpoint module before `Plug.RequestId`:
 
 ```elixir
 plug KamalPlug.HealthCheck
