@@ -49,6 +49,18 @@ plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 # ...
 ```
 
+## Testing 
+
+```
+# in terminal 1
+> mix deps.get
+> mix ecto.create && mix ecto.migrate # if needed...
+> mix phx.server
+# in terminal 2
+> curl -s -w "%{http_code}\n" http://localhost:4000/up
+# returns "ok200"
+```
+
 ## Related Info & Repos
 
 | Type        | Desc            | Link                                                                                          |
