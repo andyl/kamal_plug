@@ -1,0 +1,14 @@
+/_build/
+/cover/
+/deps/
+/doc/
+/tmp/
+erl_crash.dump
+*.ez
+kamal_plug-*.tar
+/.claude/
+/.expert/ 
+/.elixir_ls/
+CLAUDE.md
+RULES.md
+
