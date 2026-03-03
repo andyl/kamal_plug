@@ -5,7 +5,8 @@ defmodule Mix.Tasks.KamalPlug.AddPlug do
   @shortdoc "Idempotently adds plug MyLib.Superplug to Endpoint (if missing)"
 
   def run(_) do
-    endpoint_path = "lib/my_app_web/endpoint.ex"   # adjust to your app name
+    app = Mix.Project.config()[:app] |> Atom.to_string()
+    endpoint_path = "lib/#{app}_web/endpoint.ex"
 
     unless File.exists?(endpoint_path) do
       Mix.raise("Endpoint file not found: #{endpoint_path}")
