@@ -20,7 +20,7 @@ defmodule KamalPlug.MixProject do
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(:dev),  do: ["lib", "mix"]
+  defp elixirc_paths(:prod), do: ["lib/kamal_plug"]
   defp elixirc_paths(_),     do: ["lib"]
 
   defp deps do
