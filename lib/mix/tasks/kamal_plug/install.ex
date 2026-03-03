@@ -1,7 +1,7 @@
 defmodule Mix.Tasks.KamalPlug.Install do
   use Igniter.Mix.Task
 
-  # Adds KamalPlug.HealthCheck to your Phoenix endpoint
+  @shortdoc "Adds KamalPlug.HealthCheck to your Phoenix endpoint"
 
   @impl Igniter.Mix.Task
   def info(_argv, _composing_task) do
