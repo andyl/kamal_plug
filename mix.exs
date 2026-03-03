@@ -20,7 +20,8 @@ defmodule KamalPlug.MixProject do
 
   defp deps do
     [
-      {:igniter, "~> 0.6", runtime: false, optional: true},
+      # {:igniter, "~> 0.6", runtime: false, optional: true},
+      {:sourceror, "~> 0.2"},
       {:plug, "~> 1.15"},
       {:usage_rules, "~> 1.2", only: :dev, runtime: false},
     ]
