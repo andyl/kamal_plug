@@ -13,34 +13,21 @@ and request parsing.
 
 ## Installation
 
-### Automated (with Igniter)
-
-```bash
-mix igniter.install kamal_plug@github:andyl/kamal_plug
-```
-
-This will add the dependency to `mix.exs` and insert `plug KamalPlug.HealthCheck` into your
-endpoint pipeline automatically.
-
-### Manual
-
-Add the dependency to `mix.exs`, then run `mix do deps.get, compile`
+Add the dependency to `mix.exs` in your Phoenix app, then run `mix do deps.get, compile`
 
 ```elixir
 def deps do
   [
-    {:kamal_plug, github: "andyl/kamal_plug"}
+    {:igniter, "~> 0.6", only: [:dev, :test]},
+    {:kamal_plug, [github: "andyl/kamal_plug", override: true]},
   ]
 end
 ```
 
-Then manually add `plug KamalPlug.HealthCheck` to your endpoint module before `Plug.RequestId`:
+Then add `plug KamalPlug.HealthCheck` to your endpoint module before `Plug.RequestId`:
 
-```elixir
-plug KamalPlug.HealthCheck
-plug Plug.RequestId
-plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
-# ...
+```bash 
+> mix kamal_plug.install
 ```
 
 ## Testing 
