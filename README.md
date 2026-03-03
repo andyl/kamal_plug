@@ -18,7 +18,7 @@ Add the dependency to `mix.exs` in your Phoenix app, then run `mix do deps.get, 
 ```elixir
 def deps do
   [
-    {:igniter, "~> 0.6", only: [:dev, :test]},
+    {:igniter, "~> 0.6"},
     {:kamal_plug, [github: "andyl/kamal_plug", override: true]},
   ]
 end
